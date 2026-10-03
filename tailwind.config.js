@@ -15,6 +15,8 @@ module.exports = {
       },
       fontFamily: {
         headline: ['ui-sans-serif', 'system-ui', 'Segoe UI', 'Roboto', 'Arial', 'sans-serif'],
+        instrument: ['var(--font-instrument)', "'Instrument Serif'", 'serif'],
+        barlow: ['var(--font-barlow)', "'Barlow'", 'sans-serif'],
       },
       boxShadow: {
         glow: '0 0 40px rgba(103, 232, 249, 0.18)',

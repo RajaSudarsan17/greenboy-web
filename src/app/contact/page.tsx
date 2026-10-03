@@ -1,19 +1,26 @@
 import type { Metadata } from 'next';
-import Header from '@/components/common/Header';
-import ContactInteractive from './components/ContactInteractive';
+import '@/styles/cinematic.css';
+import { cineFontVars } from '@/components/cinematic/fonts';
+import CustomCursor from '@/components/cinematic/CustomCursor';
+import CineNav from '@/components/cinematic/CineNav';
+import CineFooter from '@/components/cinematic/CineFooter';
+import ContactCine from './cine/ContactCine';
 
 export const metadata: Metadata = {
   title: 'Contact - Green Boy India',
-  description: 'Professional inquiry routing for Government Procurement, OEM Partnerships, Export Relations, and Technical Consultations. Multi-channel communication hub with department-specific contact channels for Sales, Compliance, Operations, Technical Engineering, After-Sales Support, and Export services.',
+  description:
+    'Reach Green Boy India sales, compliance, operations, engineering, support and export teams. Plant at SIPCOT Industrial Park, Sriperumbudur, Chennai.',
 };
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen bg-background">
-      <Header />
-      <div className="pt-16">
-        <ContactInteractive />
-      </div>
-    </main>
+    <div className={`cine ${cineFontVars}`}>
+      <CustomCursor />
+      <CineNav />
+      <main className="font-barlow">
+        <ContactCine />
+      </main>
+      <CineFooter />
+    </div>
   );
 }
